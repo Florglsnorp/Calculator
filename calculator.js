@@ -67,19 +67,26 @@ function op(symbol){
     }else if(operator = "+"){
         calculate()
         number1 = answer
-        console.log(number1)
+        paul.innerHTML = answer
+        document.getElementById("steve").replaceWith(paul)
+        
     }else if(operator = "-"){
         calculate()
         number1 = answer
-        console.log(number1)
+        var paul = document.createElement("h1")
+        paul.setAttribute = ("id", "steve")
+
     }else if(operator = "*"){
         calculate()
         number1 = answer
-        console.log(number1)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
+
     }else{
         calculate()
         number1 = answer
-        console.log(number1)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
     }
 }
 
@@ -96,8 +103,11 @@ function calculate(){
     }else{
         answer = Number(number1) / Number(number2)
     }
-    console.log(answer)
-    return answer
+    paul.innerHTML = answer
+    document.getElementById("steve").replaceWith(paul)
+    number2 = tempNum
+    number1 = tempNum
+
 }
 
 function decimal()

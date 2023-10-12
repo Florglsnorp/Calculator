@@ -4,18 +4,32 @@ var number2 = "0"
 var operator = ""
 var answer = ""
 
+var paul = document.createElement("h1")
+paul.setAttribute = ("id", "steve")
+
 function addNum(x)
 {
     if (tempNum[0] == 0)
     {
-        tempNum = tempNum.substring(0, tempNum[0])
-        tempNum += x
-        console.log(tempNum)
+        if (tempNum[1] == ".")
+        {
+            tempNum += x
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
+        }
+        else
+        {
+            tempNum = tempNum.substring(0, tempNum[0])
+            tempNum += x
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
+        }
     }
     else
     {
         tempNum += x
-        console.log(tempNum)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
     }
 }
 
@@ -24,7 +38,8 @@ function backspace()
     if (tempNum.length == 0)
     {
         tempNum = "0"
-        console.log(tempNum)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
     }
     else
     {
@@ -32,11 +47,13 @@ function backspace()
         if (tempNum.length == 0)
         {
             tempNum = "0"
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
         else
         {
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
     }
     return result
@@ -81,4 +98,21 @@ function calculate(){
     }
     console.log(answer)
     return answer
+}
+
+function decimal()
+{
+    if (tempNum.indexOf(".") == -1)
+    {
+        tempNum += "."
+    }
+    paul.innerHTML = tempNum
+    document.getElementById("steve").replaceWith(paul)
+}
+
+function clearNums()
+{
+    tempNum = "0"
+    paul.innerHTML = tempNum
+    document.getElementById("steve").replaceWith(paul)
 }

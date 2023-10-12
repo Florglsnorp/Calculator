@@ -1,4 +1,7 @@
 var tempNum = "0"
+var number1 = "0"
+var number2 = "0"
+var operator = ""
 
 function addNum(x)
 {
@@ -34,6 +37,26 @@ function backspace()
         {
             console.log(tempNum)
         }
+    }
+    return result
+}
+
+function clear(){
+    tempNum = "0"
+    console.log(tempNum)
+    console.log("test")
+}
+
+function calculate(){
+    var result = 0
+    if(operator == "+"){
+        result = num1 + num2
+    }else if(operator == "-"){
+        result = num1 - num2
+    }else if(operator == "*"){
+        result = num1 * num2
+    }else{
+        result = num1 / num2
     }
     return result
 }

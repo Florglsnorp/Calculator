@@ -9,4 +9,5 @@ function calculate(num1, num2, operator){
     }else{
         result = num1 / num2
     }
+    return result
 }

@@ -1,19 +1,36 @@
 button {
-    font-size: large;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
     font-weight: 1000;
     margin: 2px;
     height: 80px;
-    width: 150px;
+    width: 100px;
+    border-radius: 30%;
+    position: relative;
 }
 
+.back{
+    background-color: antiquewhite;
+    height: auto;
+    width: 450px;
+    border: 3px solid black;
+    border-radius:3%;
+}
+.back2 {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 .blank {
     color: transparent;
 }
 
-#answer {
-    position:relative;
-    left: 570px;
-}
+.answer {
+    position: relative;
+    padding-top: 10px;
+    padding-left:30px;
+    /* background-color: rgb(241, 222, 196); */
+
+} 
 
 .sidebar {
     width: 100px;

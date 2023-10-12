@@ -2,6 +2,7 @@ var tempNum = "0"
 var number1 = "0"
 var number2 = "0"
 var operator = ""
+var answer = ""
 
 function addNum(x)
 {
@@ -41,22 +42,30 @@ function backspace()
     return result
 }
 
-function clear(){
-    tempNum = "0"
-    console.log(tempNum)
-    console.log("test")
+function op(symbol){
+    if(operator == ""){
+        number1 = tempNum
+        tempNum = "0"
+        operator = symbol
+    }else if(operator = "+"){
+        number2 = tempNum
+        tempNum = "0"
+        answer = calculate()
+        number1 = answer
+        console.log(number1)
+    }
 }
 
 function calculate(){
     var result = 0
     if(operator == "+"){
-        result = num1 + num2
+        result = Number(number1) + Number(number2)
     }else if(operator == "-"){
-        result = num1 - num2
+        result = Number(number1) - Number(number2)
     }else if(operator == "*"){
-        result = num1 * num2
+        result = Number(number1) * Number(number2)
     }else{
-        result = num1 / num2
+        result = Number(number1) / Number(number2)
     }
     return result
 }

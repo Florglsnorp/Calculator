@@ -1,7 +1,26 @@
 button {
     font-size: large;
     font-weight: 1000;
-    margin: 3px;
+    margin: 2px;
     height: 80px;
     width: 150px;
+}
+
+.blank {
+    color: transparent;
+}
+
+#answer {
+    position:relative;
+    left: 570px;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: gainsboro;
+}
+
+.summer {
+    background-color: darkkhaki;
+    width: 100px;
 }

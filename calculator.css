@@ -25,9 +25,10 @@ button {
 }
 
 .answer {
-    position: relative;
     padding-top: 10px;
-    padding-left:30px;
+    padding-left:10px;
+    display: block;
+    direction: rtl;
     /* background-color: rgb(241, 222, 196); */
 
 } 

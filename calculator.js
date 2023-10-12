@@ -48,24 +48,37 @@ function op(symbol){
         tempNum = "0"
         operator = symbol
     }else if(operator = "+"){
-        number2 = tempNum
-        tempNum = "0"
-        answer = calculate()
+        calculate()
+        number1 = answer
+        console.log(number1)
+    }else if(operator = "-"){
+        calculate()
+        number1 = answer
+        console.log(number1)
+    }else if(operator = "*"){
+        calculate()
+        number1 = answer
+        console.log(number1)
+    }else{
+        calculate()
         number1 = answer
         console.log(number1)
     }
 }
 
 function calculate(){
-    var result = 0
+    number2 = tempNum
+    tempNum = "0"
+
     if(operator == "+"){
-        result = Number(number1) + Number(number2)
+        answer = Number(number1) + Number(number2)
     }else if(operator == "-"){
-        result = Number(number1) - Number(number2)
+        answer = Number(number1) - Number(number2)
     }else if(operator == "*"){
-        result = Number(number1) * Number(number2)
+        answer = Number(number1) * Number(number2)
     }else{
-        result = Number(number1) / Number(number2)
+        answer = Number(number1) / Number(number2)
     }
-    return result
+    console.log(answer)
+    return answer
 }

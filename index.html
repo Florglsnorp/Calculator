@@ -9,28 +9,42 @@
 <body>
     <h1> Calculator</h1>
     <p id="text"></p>
-    <button value="AC";>Ac</button>
-    <button onclick="backspace()";>Bsp</button>
-    <button value="clr";>clr</button>
-    <button value="/";>-/-</button><br>
-    <button onclick="addNum(7)">7</button>
-    <button onclick="addNum(8)";>8</button>
-    <button onclick="addNum(9)";>9</button>
-    <button value="*";>x</button><br>
-    <button onclick="addNum(4)";>4</button>
-    <button onclick="addNum(5)";>5</button>
-    <button onclick="addNum(6)";>6</button>
-    <button value="+";>+</button><br>
-    <button onclick="addNum(1)";>1</button>
-    <button onclick="addNum(2)";>2</button>
-    <button onclick="addNum(3)";>3</button>
-    <button value="-";>-</button><br>
-    <button value="1";>/</button>
-    <button onclick="addNum(0)";>0</button>
-    <button value=".";>.</button>
-    <button value="=";>=</button><br>
 
+    <div class="back">
 
+        <div class="answer">
+            <h1>0</h1>
+        </div>
+        <br>
+
+        <div class="back2">
+            <button value="AC";>Ac</button>
+            <button onclick="backspace()";>Bsp</button>
+            <button onclick="clearNums()">clr</button>
+            <button div class="sidebar";>÷</button><br>
+
+            <button onclick="addNum(7)">7</button>
+            <button onclick="addNum(8)">8</button>
+            <button onclick="addNum(9)">9</button>
+            <button div class="sidebar">x</button><br>
+
+            <button onclick="addNum(4)">4</button>
+            <button onclick="addNum(5)">5</button>
+            <button onclick="addNum(6)">6</button>
+            <button div class="sidebar">+</button><br>
+
+            <button onclick="addNum(1)">1</button>
+            <button onclick="addNum(2)">2</button>
+            <button onclick="addNum(3)">3</button>
+            <button div class="sidebar">-</button><br>
+
+            <button div class="blank">/</button>
+            <button onclick="addNum(0)">0</button>
+            <button onclick="decimal()">.</button>
+            <button div class="summer">=</button><br>
+        </div>
+
+    </div>
 
 
 

@@ -1,12 +1,22 @@
 var tempNum = "0"
 
+
+
 function addNum(x)
 {
     if (tempNum[0] == 0)
     {
-        tempNum = tempNum.substring(0, tempNum[0])
-        tempNum += x
-        console.log(tempNum)
+        if (tempNum[1] == ".")
+        {
+            tempNum += x
+            console.log(tempNum)
+        }
+        else
+        {
+            tempNum = tempNum.substring(0, tempNum[0])
+            tempNum += x
+            console.log(tempNum)
+        }
     }
     else
     {
@@ -35,4 +45,19 @@ function backspace()
             console.log(tempNum)
         }
     }
+}
+
+function decimal()
+{
+    if (tempNum.indexOf(".") == -1)
+    {
+        tempNum += "."
+    }
+    console.log(tempNum)
+}
+
+function clearNums()
+{
+    tempNum = "0"
+    console.log(tempNum)
 }

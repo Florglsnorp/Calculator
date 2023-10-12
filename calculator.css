@@ -1,5 +1,6 @@
 button {
-    font-size: large;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
     font-weight: 1000;
     margin: 2px;
     height: 80px;
@@ -10,18 +11,23 @@ button {
 
 .back{
     background-color: antiquewhite;
-    width: 430px;
+    height: auto;
+    width: 450px;
     border: 3px solid black;
     border-radius:3%;
 }
-
+.back2 {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 .blank {
     color: transparent;
 }
 
 .answer {
     position: relative;
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-left:30px;
     /* background-color: rgb(241, 222, 196); */
 
 } 

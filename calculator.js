@@ -1,6 +1,7 @@
 var tempNum = "0"
 
-
+var paul = document.createElement("h1")
+paul.setAttribute = ("id", "steve")
 
 function addNum(x)
 {
@@ -9,19 +10,22 @@ function addNum(x)
         if (tempNum[1] == ".")
         {
             tempNum += x
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
         else
         {
             tempNum = tempNum.substring(0, tempNum[0])
             tempNum += x
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
     }
     else
     {
         tempNum += x
-        console.log(tempNum)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
     }
 }
 
@@ -30,7 +34,8 @@ function backspace()
     if (tempNum.length == 0)
     {
         tempNum = "0"
-        console.log(tempNum)
+        paul.innerHTML = tempNum
+        document.getElementById("steve").replaceWith(paul)
     }
     else
     {
@@ -38,11 +43,13 @@ function backspace()
         if (tempNum.length == 0)
         {
             tempNum = "0"
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
         else
         {
-            console.log(tempNum)
+            paul.innerHTML = tempNum
+            document.getElementById("steve").replaceWith(paul)
         }
     }
 }
@@ -53,11 +60,13 @@ function decimal()
     {
         tempNum += "."
     }
-    console.log(tempNum)
+    paul.innerHTML = tempNum
+    document.getElementById("steve").replaceWith(paul)
 }
 
 function clearNums()
 {
     tempNum = "0"
-    console.log(tempNum)
+    paul.innerHTML = tempNum
+    document.getElementById("steve").replaceWith(paul)
 }

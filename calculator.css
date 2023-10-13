@@ -9,6 +9,11 @@ button {
     position: relative;
 }
 
+button:hover{
+    background-color: gainsboro;
+    font-size: 27px;
+}
+
 .back{
     background-color: antiquewhite;
     height: auto;
@@ -21,17 +26,25 @@ button {
     padding-bottom: 10px;
 }
 .blank {
+    background-color: transparent;
     color: transparent;
+    border: 0px solid black;
+}
+
+.blank:hover{
+    background-color: transparent;
 }
 
 .answer {
     padding-top: 10px;
     padding-left:10px;
     display: block;
-    direction: rtl;
-    /* background-color: rgb(241, 222, 196); */
+}
 
-} 
+.sidebar:hover{
+    background-color: darkgrey;
+    font-size: 27px;
+}
 
 .sidebar {
     width: 100px;
@@ -39,6 +52,11 @@ button {
 }
 
 .summer {
-    background-color: darkkhaki;
+    background-color: khaki;
     width: 100px;
+}
+
+.summer:hover{
+    background-color: darkkhaki;
+    font-size: 30px;
 }

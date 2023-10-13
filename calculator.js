@@ -4,9 +4,6 @@ var number2 = ""
 var operator = ""
 var answer = ""
 
-var paul = document.createElement("h1")
-paul.setAttribute = ("id", "steve")
-
 function addNum(x)
 {
     if (tempNum[0] == 0)
@@ -93,8 +90,7 @@ function decimal()
     {
         tempNum += "."
     }
-    paul.innerHTML = tempNum
-    document.getElementById("steve").replaceWith(paul)
+    document.getElementById("steve").innerHTML = tempNum
 }
 
 function clearNums()

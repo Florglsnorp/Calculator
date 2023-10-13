@@ -20,27 +20,28 @@
             <button value="AC";>Ac</button>
             <button onclick="backspace()";>Bsp</button>
             <button onclick="clearNums()">clr</button>
-            <button div class="sidebar";>÷</button><br>
+            <button div class="sidebar"; onclick="saveNum('/')">÷</button><br>
 
             <button onclick="addNum(7)">7</button>
             <button onclick="addNum(8)">8</button>
             <button onclick="addNum(9)">9</button>
-            <button div class="sidebar">x</button><br>
+            <button div class="sidebar"; onclick="saveNum('*')">x</button><br>
 
             <button onclick="addNum(4)">4</button>
             <button onclick="addNum(5)">5</button>
             <button onclick="addNum(6)">6</button>
-            <button div class="sidebar">+</button><br>
+            <button div class="sidebar"; onclick="saveNum('-')">-</button><br>
+
 
             <button onclick="addNum(1)">1</button>
             <button onclick="addNum(2)">2</button>
             <button onclick="addNum(3)">3</button>
-            <button div class="sidebar">-</button><br>
+            <button div class="sidebar"; onclick="saveNum('+')">+</button><br>
 
             <button div class="blank">/</button>
             <button onclick="addNum(0)">0</button>
             <button onclick="decimal()">.</button>
-            <button div class="summer">=</button><br>
+            <button div class="summer" onclick="saveNum()">=</button><br>
         </div>
 
     </div>

@@ -1,6 +1,6 @@
 var tempNum = "0"
-var number1 = "0"
-var number2 = "0"
+var number1 = ""
+var number2 = ""
 var operator = ""
 var answer = ""
 
@@ -14,22 +14,19 @@ function addNum(x)
         if (tempNum[1] == ".")
         {
             tempNum += x
-            paul.innerHTML = tempNum
-            document.getElementById("steve").replaceWith(paul)
+            document.getElementById("steve").innerHTML = tempNum
         }
         else
         {
             tempNum = tempNum.substring(0, tempNum[0])
             tempNum += x
-            paul.innerHTML = tempNum
-            document.getElementById("steve").replaceWith(paul)
+            document.getElementById("steve").innerHTML = tempNum
         }
     }
     else
     {
         tempNum += x
-        paul.innerHTML = tempNum
-        document.getElementById("steve").replaceWith(paul)
+        document.getElementById("steve").innerHTML = tempNum
     }
 }
 
@@ -38,8 +35,7 @@ function backspace()
     if (tempNum.length == 0)
     {
         tempNum = "0"
-        paul.innerHTML = tempNum
-        document.getElementById("steve").replaceWith(paul)
+        document.getElementById("steve").innerHTML = tempNum
     }
     else
     {
@@ -47,53 +43,35 @@ function backspace()
         if (tempNum.length == 0)
         {
             tempNum = "0"
-            paul.innerHTML = tempNum
-            document.getElementById("steve").replaceWith(paul)
+            document.getElementById("steve").innerHTML = tempNum
         }
         else
         {
-            paul.innerHTML = tempNum
-            document.getElementById("steve").replaceWith(paul)
+            document.getElementById("steve").innerHTML = tempNum
         }
     }
     return result
 }
 
-function op(symbol){
-    if(operator == ""){
+function saveNum(op){
+    if(number1 == ""){
         number1 = tempNum
         tempNum = "0"
-        operator = symbol
-    }else if(operator = "+"){
-        calculate()
-        number1 = answer
-        paul.innerHTML = answer
-        document.getElementById("steve").replaceWith(paul)
-        
-    }else if(operator = "-"){
-        calculate()
-        number1 = answer
-        var paul = document.createElement("h1")
-        paul.setAttribute = ("id", "steve")
-
-    }else if(operator = "*"){
-        calculate()
-        number1 = answer
-        paul.innerHTML = tempNum
-        document.getElementById("steve").replaceWith(paul)
-
-    }else{
-        calculate()
-        number1 = answer
-        paul.innerHTML = tempNum
-        document.getElementById("steve").replaceWith(paul)
+        console.log(number1)
+    }else if(number2 == ""){
+        number2 = tempNum
+        tempNum = "0"
+        console.log(number2)
     }
+    if(number1 != "" && number2 != ""){
+        calculate()
+        number1 = answer
+        number2 = ""
+    }
+    operator = op
 }
 
 function calculate(){
-    number2 = tempNum
-    tempNum = "0"
-
     if(operator == "+"){
         answer = Number(number1) + Number(number2)
     }else if(operator == "-"){
@@ -103,11 +81,10 @@ function calculate(){
     }else{
         answer = Number(number1) / Number(number2)
     }
-    paul.innerHTML = answer
-    document.getElementById("steve").replaceWith(paul)
-    number2 = tempNum
-    number1 = tempNum
-
+    document.getElementById("steve").innerHTML = answer
+    number2 = ""
+    number1 = ""
+    operator = ""
 }
 
 function decimal()
@@ -122,7 +99,9 @@ function decimal()
 
 function clearNums()
 {
+    number1 = ""
+    number2 = ""
+    operator = ""
     tempNum = "0"
-    paul.innerHTML = tempNum
-    document.getElementById("steve").replaceWith(paul)
+    document.getElementById("steve").innerHTML = tempNum
 }
